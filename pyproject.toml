@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "change-notifier"
+version = "0.1.0"
+description = ""
+authors = ["Lord-A2K <amirkiankaveh@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic-settings = "^2.1.0"
+tinydb = "^4.8.0"
+requests-html = "^0.10.0"
+python-telegram-bot = {extras = ["all"], version = "^20.7"}
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "src.main:main"
